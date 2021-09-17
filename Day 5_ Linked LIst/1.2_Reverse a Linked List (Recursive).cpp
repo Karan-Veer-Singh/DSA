@@ -10,30 +10,17 @@
  */
 class Solution {
 public:
-    
-    void reverse(ListNode* &ans, ListNode *head)
-    {
-        if(head == NULL)
-            return;
-        
-        if(head -> next == NULL)
-        {
-            ans = head;
-            return;
-        }
-        
-        reverse(ans, head -> next);
-        head -> next -> next = head;
-        head -> next = NULL;
-    }
-    
     ListNode* reverseList(ListNode* head) {
         
-        ListNode *ans = NULL;
-        reverse(ans, head); 
+        if(head == NULL || head -> next == NULL)
+            return head;
         
-        return ans;        
+        ListNode *sHead = reverseList(head -> next);
+        
+        head -> next -> next = head;
+        head -> next = NULL;
+        
+        return sHead;
+        
     }
 };
-
-////https://leetcode.com/problems/reverse-linked-list/
