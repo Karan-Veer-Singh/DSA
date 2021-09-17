@@ -24,3 +24,5 @@ public:
         return slow;
     }
 };
+
+//https://leetcode.com/problems/middle-of-the-linked-list/
