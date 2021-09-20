@@ -63,3 +63,4 @@ int MyStack :: pop()
     return x;
 }
 
+// https://practice.geeksforgeeks.org/problems/implement-stack-using-array/1
